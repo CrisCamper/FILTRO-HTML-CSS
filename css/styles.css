@@ -1,0 +1,265 @@
+/* !GENERAL OPTIONS */
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li a{
+    color: white;
+}
+
+ul li a:hover{
+    transition: .150ms;
+    font-size: 1.8rem;
+    text-shadow: 0px 0px 20px#f8ae40;
+}
+
+
+html{
+    background-color: #2D3250;
+}
+
+body{
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        "campusshop campusshop products products products "
+        "campusshop campusshop products products products "
+        "campusshop campusshop products products products "
+        "campusshop campusshop products products products "
+    ;
+    gap: 10;
+}
+
+/* !ASIDE LEFT */
+
+#aside-left{
+    margin-left: 50px ;
+    font-family: "Protest Riot", sans-serif;
+    font-style: normal;
+    background-color: #424769;
+    position: fixed;
+    grid-area: campusshop;
+    padding: 5%;
+    height: 84%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px #111a;
+}
+
+.campus-shop h1{
+    font-size: 3.5rem;
+    color: whitesmoke;
+    text-shadow: 0px 0px 20px #f8ae40;
+}
+
+.campus-shop ul li{
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.navbar{
+    padding-top: 100px;
+}
+
+.foot{
+    padding-top: 20px ;
+}
+
+.footers{
+    font-size: 1.5rem;
+}
+
+.footers ul{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footers ul li{
+    padding: 20px;
+}
+
+.footers p{
+    padding-top: 100px;
+    text-align: center;
+}
+
+
+/* !PRODUCTS */
+
+#products{
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-style: normal;
+    background-color: #7077A1;
+    grid-area: products;
+    padding: 5%;
+    border-radius: 50px ;
+    box-shadow: 0px 0px 10px #111a ;
+    width: 50%;
+    margin-left: 35%;
+}
+
+#products h1{
+    font-size: 3.5rem;
+    padding-bottom: 40px ;
+    color: #ECE3CE;
+    text-shadow: 0px 0px 20px #f8ae40;
+}
+
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+    
+}
+
+.container-products .product{
+    width: 300px;
+    height: auto;
+    margin: 3rem;
+}
+
+.product .image{
+    width: min-content;
+    height: min-content;
+}
+
+.image img{
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px#f8ae40;
+}
+
+.text-image{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 20px #f8ae40;
+    background-color: #7077A1;
+    border-radius: 15px;
+}
+
+.text-image button{
+    width: 150px;
+    padding: 15px;
+    background-color: #f8ae40;
+    border: 1px solid #f8ae40;
+    border-radius: 15px;
+    color: aliceblue;
+}
+.text-image button:hover{
+    transition: .1s;
+    box-shadow: 0px 0px 20px #ffc670;
+}
+.text-image button:active{
+    box-shadow: none;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "campusshop campusshop campusshop campusshop"
+            "products products products products products"
+            "products products products products products"
+            "products products products products products"
+        ;
+    }
+    
+    #aside-left{
+        margin-left: 0;
+        height: 966px;
+        position: fixed;
+        top: -1049px;
+        right: 0;
+        left: 0;
+        transition: top 0.5s;
+    }
+    
+    .container-products{
+        justify-content: center;
+    }
+
+    .container-products .product{
+        width: 200px;
+        height: auto;
+        margin: 3rem;
+    }
+
+    #products{
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 0;
+        width: 90%;        
+    }
+    .product .image{
+        width: min-content;
+        height: min-content;
+    }
+    
+    .image img{
+        width: 200px;
+        height: 300px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px#f8ae40;
+    }
+}
+
+@media (max-width: 425px) {
+    body{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+            "campusshop campusshop campusshop campusshop"
+            "products products products products products"
+            "products products products products products"
+            "products products products products products"
+        ;
+    }
+    
+    #aside-left{
+        height: 1000px;
+        position: fixed;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+        transition: top 0.5s;
+    }
+    
+    .container-products{
+        justify-content: center;
+    }
+
+    .container-products .product{
+        width: 200px;
+        height: auto;
+        margin: 3rem;
+    }
+
+    #products{
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 0;
+        width: 90%;        
+    }
+    .product .image{
+        width: min-content;
+        height: min-content;
+    }
+    
+    .image img{
+        width: 200px;
+        height: 300px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px#f8ae40;
+    }
+}
